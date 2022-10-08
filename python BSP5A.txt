@@ -1,0 +1,90 @@
+from tkinter import*
+
+root=Tk()
+root.title('Exchange')
+root.geometry('500x400')
+lb1=Label(root,font=('Times new roman',16),text='Bath to kip')
+lb1.place(x=200,y=50)
+
+lb2=Label(root,font=('Times new roman',16),text='Enter Bath:')
+lb2.place(x=50,y=100)
+txt1=Entry(root,font=('Times New Roman',16),textvariable='')
+txt1.place(x=150,y=100)
+
+lb3=Label(root,font=('Times new roman',16),text='Enter Rate:')
+lb3.place(x=50,y=150)
+txt2=Entry(root,font=('Times New Roman',16),textvariable='')
+txt2.place(x=150,y=150)
+
+btn1=Button(root,font=('Times New Roman',16),text='Exchange')
+btn1.place(x=100,y=200)
+btn2=Button(root,font=('Times New Roman',16),width=10,text='Clear')
+btn2.place(x=250,y=200)
+
+lb4=Label(root,font=('Times new roman',16),text='Enter Total:')
+lb4.place(x=50,y=150)
+txt3=Entry(root,font=('Times New Roman',16),textvariable='')
+txt3.place(x=150,y=300)
+root.mainloop()
+
+
+
+
+--------------------------------------------------------------------------------
+
+from tkinter import *
+def B2K():
+    b=int(bath.get())
+    r=int(rate.get())
+    k=b*r
+    kip.set(f'{k:,}kip')
+
+root = Tk()
+root.title('Exchange')
+root.geometry('500x400')
+bath=StringVar()
+rate=StringVar()
+kip=StringVar()
+
+lb1=Label(root,font=('Times New Roman',16),text='Bath to kip')
+lb1.place(x=200,y=50)
+
+lb2=Label(root,font=('Times New Roman',16),text='Enter Bath')
+lb2.place(x=50,y=100)
+txt1=Entry(root,font=('Times New Roman',16),textvariable=bath)
+txt1.place(x=150,y=100)
+
+lb3=Label(root,font=('Times New Roman',16),text='Enter Rate')
+lb3.place(x=50,y=150)
+txt2=Entry(root,font=('Times New Roman',16),textvariable=rate)
+txt2.place(x=150,y=150)
+
+btn1=Button(root,font=('Times New Roman',16),width=10,text='Exchange',command=B2K)
+btn1.place(x=100,y=200)
+btn2=Button(root,font=('Times New Roman',16),width=10,text='Clear')
+btn2.place(x=250,y=200)
+
+lb4=Label(root,font=('Times New Roman',16),text='Total')
+lb4.place(x=50,y=300)
+txt3=Entry(root,font=('Times New Roman',16),textvariable=kip)
+txt3.place(x=150,y=300)
+
+root.mainloop()
+
+_____________________________________________________
+
+from tkinter import*
+from tkinter import ttk
+import tkinter.messagebox as msg
+#import mysql.connecter as mysql
+class Unit:
+    def __init__(self,root):
+        self.root=root
+        self.root.title('Unit frame')
+        self.root.geometry('700x600+100+50')
+if(__name__=='__main__'):
+    root=Tk()
+    application=Unit(root)
+    root.mainloop()
+
+_________________________________________________________
